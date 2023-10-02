@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/blog.css">
+    <title>MY WEBSITE</title>
+</head>
+<body>
+    <div class="top">
+
+        <form action="./process.js" method="post" enctype="multipart/form-data">
+            <h1>Add My Project</h1>
+            <div class="project-name">
+                <label for="project-name">Project Name</label><br>
+                <input id="project-name" type="text">
+            </div>
+
+            <label for="start">Start Date</label><br>
+            <input type="date" id="start" name="start" min="2023-01-01" max="2023-12-31"><br>
+            <label for="end">End Date</label><br>
+            <input type="date" id="end" name="end" min="2023-01-01" max="2023-12-31">
+
+
+            <div class="description">
+                <label for="description">Description</label><br>
+                <textarea id="description"></textarea>
+            </div>
+
+            <div>
+                <label for="tech">Technologies</label><br>
+                <input type="radio" id="nodeJs" name="tech" value="nodeJs">
+                <label for="nodeJs">Node Js</label><br>
+
+                <input type="radio" id="reactJs" name="tech" value="reactJs">
+                <label for="reactJs">React Js</label><br>
+
+                <input type="radio" id="nextJS" name="tech" value="nextJS">
+                <label for="nextJS">Next Js</label><br>
+
+                <input type="radio" id="typeScript" tech="tech" value="typeScript">
+                <label for="typeScript">Type Script</label><br>
+            </div>
+
+            <div class="gambar">
+                <label for="gambar">Upload Image</label>
+                <input type="file" id="gambar" name="gambar"><br>
+            </div>
+
+            <div class="submit">
+                <button type="button" 
+                onclick="addData()" class="btn-submit">Submit</button>
+            </div>
+    </form>
+            
+</div>
+    
+<div class="card-container">
+    
+</div>
+
+<script src="./js/blog.js"></script>
+</body>
+</html>

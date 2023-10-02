@@ -1,5 +1,5 @@
 function getData() {
-    // data collection
+    // data utama
 
     const name=document.getElementById("name").value
     const email=document.getElementById("email").value
@@ -7,7 +7,7 @@ function getData() {
     const subject=document.getElementById("subject").value
     const message=document.getElementById("message").value
 
-    //data validation
+    
     if(name == ""){
         return alert("Tidak Boleh Kosong")
     } else if(email == ""){
@@ -20,7 +20,7 @@ function getData() {
         return alert("Tidak Boleh Kosong")
     }
 
-    //execute to email
+    //mengarahkan ke email
     const myEmail = "hi.junsatsatprakoso@gmail.com"
     let a = document.createElement("a")
     a.href = `mailto:${myEmail}?subject=${subject}&body= hi my name is ${name} , whay do you call me ${phone} untuk membahaya soal project bisnis kita ${message}`

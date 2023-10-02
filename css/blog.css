@@ -1,0 +1,100 @@
+body{
+    /* display: flex;
+    justify-content: center; */
+    background-color: goldenrod;
+    padding: 40px 300px;
+}
+
+.top{
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+    margin: 10px 50px;
+    padding: 0 0 10px 0;
+
+}
+
+.project-name{
+    margin: 5px 0;
+}
+
+#project-name{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-top: 5px;
+  }
+
+.description{
+    margin: 10px 0;
+}
+
+#description{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-top: 5px;
+}
+
+.gambar{
+    margin: 10px 0;
+}
+
+.btn-submit{
+    background-color: black;
+    padding: 5px 25px;
+    color: white;
+    border: none;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.btn-submit:hover{
+    background-color: white;
+    padding: 5px 25px;
+    color: black;
+    border: none;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 11px;
+}
+
+
+/* CSS untuk card */
+.card-container{
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+    margin: 10px 50px;
+    padding: 0 0 10px 0;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+    text-align: left;
+}
+
+.card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin: 5px 0;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
