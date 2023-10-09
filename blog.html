@@ -1,64 +1,110 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html>
+  <head>
+    <title>My Website</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/blog.css">
-    <title>MY WEBSITE</title>
-</head>
-<body>
-    <div class="top">
+    <link rel="stylesheet" href="./css/blog.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="nav-left">
+        <ul>
+          <img src="./madrid-removebg-preview.png" alt="logo" />
+          <li>
+            <a class="item-collapse" href="./index.html">Home</a>
+          </li>
+          <li>
+            <a class="item-collapse" href="./blog.html">Blog</a>
+          </li>
+          <li class="item-collapse">
+            <a href="testimoni.html">Testimoni</a>
+          </li>
+        </ul>
+      </div>
 
-        <form action="./process.js" method="post" enctype="multipart/form-data">
-            <h1>Add My Project</h1>
-            <div class="project-name">
-                <label for="project-name">Project Name</label><br>
-                <input id="project-name" type="text">
+      <div class="nav-right">
+        <a class="item-collapse" href="./contact-me.html">Contact Me</a>
+      </div>
+      <div class="nav-right" id="barsmenu">
+        <button class="humberger-button" onclick="openhumberger()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div class="humberger-nav-container" id="humberger-nav-container">
+      <a href="./index.html" class="humberger-active">Home</a>
+      <a href="./blog.html">Blog</a>
+      <a href="./contact-me.html">Contact Me</a>
+    </div>
+
+    <!-- End Navbar -->
+
+    <!-- Blog -->
+    <!-- Form -->
+    <div class="blog">
+      <div class="blog-form">
+        <div class="form-container">
+          <form onsubmit="submitData(event)">
+            <h1>Blog</h1>
+            <div>
+              <label for="input-blog-title">Title</label>
+              <input id="input-blog-title" />
             </div>
-
-            <label for="start">Start Date</label><br>
-            <input type="date" id="start" name="start" min="2023-01-01" max="2023-12-31"><br>
-            <label for="end">End Date</label><br>
-            <input type="date" id="end" name="end" min="2023-01-01" max="2023-12-31">
-
-
-            <div class="description">
-                <label for="description">Description</label><br>
-                <textarea id="description"></textarea>
+            <div>
+              <label for="input-blog-content">Content</label>
+              <textarea id="input-blog-content"></textarea>
             </div>
 
             <div>
-                <label for="tech">Technologies</label><br>
-                <input type="radio" id="nodeJs" name="tech" value="nodeJs">
-                <label for="nodeJs">Node Js</label><br>
-
-                <input type="radio" id="reactJs" name="tech" value="reactJs">
-                <label for="reactJs">React Js</label><br>
-
-                <input type="radio" id="nextJS" name="tech" value="nextJS">
-                <label for="nextJS">Next Js</label><br>
-
-                <input type="radio" id="typeScript" tech="tech" value="typeScript">
-                <label for="typeScript">Type Script</label><br>
+              <label>Upload Image</label>
+              <div class="input-blog-image-group" style="box-sizing: border-box;">
+                <label for="input-blog-image">
+                  <p>upload File</p>
+                </label>
+                <input type="file" id="input-blog-image" hidden />
+              </div>
             </div>
-
-            <div class="gambar">
-                <label for="gambar">Upload Image</label>
-                <input type="file" id="gambar" name="gambar"><br>
+            <div class="button-group">
+              <button>Post Blog</button>
             </div>
+          </form>
+        </div>
+      </div>
 
-            <div class="submit">
-                <button type="button" 
-                onclick="addData()" class="btn-submit">Submit</button>
+      <hr class="line" />
+      <div class="blog-list" id="contents">
+        <div class="blog-list-item">
+          <div class="blog-image">
+            <img src="./training.jpeg" alt="" />
+          </div>
+          <div class="blog-content">
+            <div class="btn-group">
+              <button class="btn-edit">Edit Post</button>
+              <button class="btn-post">Post Blog</button>
             </div>
-    </form>
-            
-</div>
+            <h1>
+              <a href="blog-detail.html" target="_blank"
+                >Sepak Bola masih menjadi trending Utama dunia di semua kalangan</a
+              >
+            </h1>
+            <div class="detail-blog-content">
+              22 mei 2021 18:30 WIB | Andi Setyo
+            </div>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam aut rem tenetur sunt ipsum ipsam reprehenderit eveniet fugiat ex autem est nihil accusamus expedita neque, animi dolor, quisquam magni enim!
+            </p>
+
+            <div style="float:right; margin: 10px">
+              <p style="font-size: 15px; color:grey">2 minutes ago</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/blog.js"></script>
+    <script src="./js/button.js"></script>
     
-<div class="card-container">
-    
-</div>
-
-<script src="./js/blog.js"></script>
-</body>
+  </body>
 </html>

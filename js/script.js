@@ -1,6 +1,7 @@
 function getData() {
     // data utama
 
+
     const name=document.getElementById("name").value
     const email=document.getElementById("email").value
     const phone=document.getElementById("phone").value

@@ -1,8 +1,8 @@
 function addData() {
         // Mengambil nilai input dari form
         var projectName = document.getElementById("project-name").value;
-        var startDate = document.getElementById("start").value;
-        var endDate = document.getElementById("end").value;
+        // var startDate = document.getElementById("start").value;
+        // var endDate = document.getElementById("end").value;
         var description = document.getElementById("description").value;
         var selectedTechnology = document.querySelector('input[name="tech"]:checked').value;
         var fileInput = document.getElementById("gambar");
@@ -19,8 +19,6 @@ function addData() {
             cardContent.innerHTML = `
                 <h2>${projectName}</h2>
                 <img src="" alt="Project Image" id="project-image">
-                <p>Start Date: ${startDate}</p>
-                <p>End Date: ${endDate}</p>
                 <p>Description: ${description}</p>
                 <p>Technology: ${selectedTechnology}</p>
             `;
